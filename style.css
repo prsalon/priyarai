@@ -185,11 +185,19 @@ header{
 
 }
 
+.logo div{
+
+    padding-top:7px;
+
+}
+
 .logo h2{
 
     color:var(--gold);
 
     font-size:1.3rem;
+
+     margin-bottom:-5px;
 
 }
 
