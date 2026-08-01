@@ -1,0 +1,17 @@
+{
+  "name": "PR Salon Jagun",
+  "short_name": "PR Salon",
+  "description": "Luxury Hair, Skin, Nail, Eyelash & Hydrafacial Services in Jagun, Assam.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#d4af37",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
