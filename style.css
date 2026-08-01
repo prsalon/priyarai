@@ -1,0 +1,1324 @@
+/* ==========================================
+   PR SALON & NAIL ART
+   STYLE.CSS
+   PART 1
+==========================================*/
+
+/* ==========================
+   RESET
+==========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#111;
+    color:#f5f5f5;
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+/* ==========================
+   THEME VARIABLES
+==========================*/
+
+:root{
+
+    --black:#111111;
+    --dark:#1b1b1b;
+    --light:#ffffff;
+
+    --gold:#d4af37;
+    --gold-light:#f1d77a;
+
+    --gray:#bfbfbf;
+
+    --shadow:0 10px 30px rgba(0,0,0,.30);
+
+    --radius:12px;
+
+    --transition:.35s ease;
+
+}
+
+/* ==========================
+   GENERAL
+==========================*/
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+section{
+
+    padding:90px 8%;
+
+}
+
+.container{
+
+    width:100%;
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    color:var(--gold);
+
+    font-size:2.2rem;
+
+    margin-bottom:40px;
+
+    position:relative;
+
+}
+
+.section-title::after{
+
+    content:"";
+
+    width:90px;
+
+    height:3px;
+
+    background:var(--gold);
+
+    display:block;
+
+    margin:12px auto;
+
+}
+
+.section-text{
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:auto;
+
+    color:#d0d0d0;
+
+    font-size:1.05rem;
+
+}
+
+/* ==========================
+   HEADER
+==========================*/
+
+header{
+
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+
+    left:0;
+
+    z-index:999;
+
+    background:rgba(17,17,17,.95);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ==========================
+   NAVBAR
+==========================*/
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 8%;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo img{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+}
+
+.logo h2{
+
+    color:var(--gold);
+
+    font-size:1.3rem;
+
+}
+
+.logo span{
+
+    color:#ddd;
+
+    font-size:.85rem;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+.nav-links a{
+
+    color:white;
+
+    transition:var(--transition);
+
+    font-weight:500;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--gold);
+
+}
+
+.menu-btn{
+
+    display:none;
+
+    font-size:1.6rem;
+
+    cursor:pointer;
+
+    color:var(--gold);
+
+}
+
+/* ==========================
+   HERO
+==========================*/
+
+.hero{
+
+    min-height:100vh;
+
+    background:url("images/banner.jpg") center top no-repeat;
+
+    background-size:cover;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.hero-content{
+
+    max-width:760px;
+
+    animation:fadeUp 1s ease;
+
+}
+
+.hero h1{
+
+    font-size:2.5rem;
+
+    color:var(--gold);
+
+    margin-bottom:20px;
+
+    line-height:1.2;
+
+}
+
+.hero p{
+
+    font-size:1.15rem;
+
+    color:#ececec;
+
+    margin-bottom:40px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ==========================
+   BUTTONS
+==========================*/
+
+.btn{
+
+    padding:15px 34px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    display:inline-block;
+
+}
+
+.gold{
+
+    background:var(--gold);
+
+    color:black;
+
+}
+
+.gold:hover{
+
+    background:var(--gold-light);
+
+    transform:translateY(-3px);
+
+}
+
+.outline{
+
+    border:2px solid var(--gold);
+
+    color:var(--gold);
+
+}
+
+.outline:hover{
+
+    background:var(--gold);
+
+    color:black;
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================
+   ANIMATIONS
+==========================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================
+   RESPONSIVE
+==========================*/
+
+@media(max-width:900px){
+
+    .nav-links{
+
+        display:none;
+
+    }
+
+    .menu-btn{
+
+        display:block;
+
+    }
+
+    .hero h1{
+
+        font-size:2.4rem;
+
+    }
+
+    .hero p{
+
+        font-size:1rem;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero{
+
+        padding:140px 20px 80px;
+
+    }
+
+    .hero h1{
+
+        font-size:2rem;
+
+    }
+
+    .section-title{
+
+        font-size:1.8rem;
+
+    }
+
+    .btn{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}/* ==========================================
+   PART 2
+   ABOUT • SERVICES • CARDS
+==========================================*/
+
+/* ==========================
+   SECTION BACKGROUNDS
+==========================*/
+
+.section{
+
+    background:var(--black);
+
+}
+
+.dark{
+
+    background:var(--dark);
+
+}
+
+/* ==========================
+   ABOUT
+==========================*/
+
+#about{
+
+    text-align:center;
+
+}
+
+#about .container{
+
+    max-width:900px;
+
+}
+
+#about p{
+
+    color:#d6d6d6;
+
+    font-size:1.05rem;
+
+    margin-top:20px;
+
+}
+
+/* ==========================
+   SERVICES
+==========================*/
+
+.service-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+/* ==========================
+   SERVICE CARD
+==========================*/
+
+.card{
+
+    background:#1d1d1d;
+
+    padding:35px 30px;
+
+    border-radius:var(--radius);
+
+    text-align:center;
+
+    transition:var(--transition);
+
+    border:1px solid rgba(212,175,55,.12);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Gold line animation */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:var(--gold);
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.4s;
+
+}
+
+.card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--gold);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+/* ==========================
+   ICON
+==========================*/
+
+.card i{
+
+    font-size:3rem;
+
+    color:var(--gold);
+
+    margin-bottom:25px;
+
+    transition:.4s;
+
+}
+
+.card:hover i{
+
+    transform:scale(1.15) rotate(5deg);
+
+}
+
+/* ==========================
+   TITLE
+==========================*/
+
+.card h3{
+
+    color:white;
+
+    margin-bottom:15px;
+
+    font-size:1.35rem;
+
+    font-weight:600;
+
+}
+
+/* ==========================
+   DESCRIPTION
+==========================*/
+
+.card p{
+
+    color:#cfcfcf;
+
+    font-size:.97rem;
+
+    line-height:1.8;
+
+}
+
+/* ==========================
+   OPTIONAL SMALL BUTTON
+==========================*/
+
+.card .service-btn{
+
+    display:inline-block;
+
+    margin-top:22px;
+
+    color:var(--gold);
+
+    border:1px solid var(--gold);
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    transition:var(--transition);
+
+    font-size:.9rem;
+
+}
+
+.card .service-btn:hover{
+
+    background:var(--gold);
+
+    color:black;
+
+}
+
+/* ==========================
+   HOVER GLOW
+==========================*/
+
+.card:hover{
+
+    background:#222;
+
+}
+
+/* ==========================
+   ENTRANCE ANIMATION
+==========================*/
+
+.card{
+
+    animation:fadeUp .8s ease;
+
+}
+
+/* ==========================
+   RESPONSIVE
+==========================*/
+
+@media(max-width:900px){
+
+    .service-grid{
+
+        gap:22px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .service-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .card{
+
+        padding:30px 25px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .card{
+
+        padding:25px 20px;
+
+    }
+
+    .card h3{
+
+        font-size:1.2rem;
+
+    }
+
+    .card i{
+
+        font-size:2.5rem;
+
+    }
+
+}/* ==========================================
+   PART 3
+   PRICE TABLE • GALLERY
+==========================================*/
+
+/* ==========================
+   PRICE LIST
+==========================*/
+
+#price{
+    background:var(--black);
+}
+
+#search{
+    width:100%;
+    max-width:500px;
+    display:block;
+    margin:0 auto 40px;
+    padding:15px 20px;
+    border-radius:40px;
+    border:2px solid var(--gold);
+    background:#1b1b1b;
+    color:#fff;
+    font-size:1rem;
+    outline:none;
+    transition:var(--transition);
+}
+
+#search:focus{
+    box-shadow:0 0 15px rgba(212,175,55,.30);
+}
+
+#search::placeholder{
+    color:#999;
+}
+
+/* ==========================
+   TABLE
+==========================*/
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:12px;
+    background:#1c1c1c;
+    box-shadow:var(--shadow);
+}
+
+thead{
+    background:var(--gold);
+}
+
+thead th{
+    color:#111;
+    padding:18px;
+    font-size:1rem;
+    font-weight:600;
+    text-align:left;
+}
+
+tbody tr{
+    transition:.3s;
+}
+
+tbody tr:nth-child(even){
+    background:#232323;
+}
+
+tbody tr:hover{
+    background:#2b2b2b;
+}
+
+tbody td{
+    padding:16px 18px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    color:#f2f2f2;
+    font-size:.96rem;
+}
+
+/* ==========================
+   PRICE STYLING
+==========================*/
+
+tbody td:nth-child(2){
+    color:var(--gold-light);
+    font-weight:600;
+}
+
+.offer-column{
+    display:none;
+}
+
+.offer-price{
+    display:none;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:#999;
+    margin-right:8px;
+}
+
+.new-price{
+    color:#2ecc71;
+    font-weight:700;
+}
+
+/* ==========================
+   TABLE RESPONSIVE
+==========================*/
+
+.table-wrapper{
+    overflow-x:auto;
+}
+
+/* ==========================
+   GALLERY
+==========================*/
+
+#gallery{
+    background:var(--dark);
+}
+
+.gallery-grid{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.35s;
+    border:2px solid transparent;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.04);
+    border-color:var(--gold);
+}
+
+/* ==========================
+   LIGHTBOX
+==========================*/
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.92);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    visibility:hidden;
+    transition:.35s;
+    z-index:9999;
+}
+
+.lightbox.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:85%;
+    border-radius:12px;
+    border:3px solid var(--gold);
+}
+
+.lightbox-close{
+    position:absolute;
+    top:25px;
+    right:35px;
+    font-size:2rem;
+    color:white;
+    cursor:pointer;
+}
+
+/* ==========================
+   IMAGE HOVER EFFECT
+==========================*/
+
+.gallery-grid img{
+    filter:brightness(.94);
+}
+
+.gallery-grid img:hover{
+    filter:brightness(1.05);
+}
+
+/* ==========================
+   RESPONSIVE
+==========================*/
+
+@media(max-width:768px){
+
+    table{
+        font-size:.88rem;
+    }
+
+    thead th,
+    tbody td{
+        padding:12px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:500px){
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid img{
+        height:220px;
+    }
+
+    #search{
+        font-size:.95rem;
+    }
+
+}/* ==========================================
+   PART 4
+   CONTACT • FOOTER • FLOATING BUTTONS
+   MOBILE MENU • RESPONSIVE
+==========================================*/
+
+/* ==========================
+   CONTACT
+==========================*/
+
+#contact{
+    background:var(--black);
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+    margin-top:50px;
+}
+
+.contact-grid div{
+    background:#1d1d1d;
+    padding:35px;
+    border-radius:var(--radius);
+    border:1px solid rgba(212,175,55,.15);
+    transition:var(--transition);
+}
+
+.contact-grid div:hover{
+    border-color:var(--gold);
+    transform:translateY(-5px);
+}
+
+.contact-grid h3{
+    color:var(--gold);
+    margin-bottom:20px;
+    font-size:1.4rem;
+}
+
+.contact-grid p{
+    margin:12px 0;
+    color:#ddd;
+    line-height:1.8;
+}
+
+.contact-grid i{
+    color:var(--gold);
+    width:25px;
+}
+
+.contact-grid a{
+    color:var(--gold);
+    transition:.3s;
+}
+
+.contact-grid a:hover{
+    color:var(--gold-light);
+}
+
+/* ==========================
+   FOOTER
+==========================*/
+
+footer{
+    background:#090909;
+    padding:30px;
+    text-align:center;
+    border-top:1px solid rgba(212,175,55,.15);
+}
+
+footer p{
+    color:#aaa;
+    font-size:.95rem;
+}
+
+/* ==========================
+   FLOATING WHATSAPP
+==========================*/
+
+.whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.8rem;
+    z-index:999;
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+
+/* ==========================
+   BACK TO TOP
+==========================*/
+
+#topBtn{
+    position:fixed;
+    right:25px;
+    bottom:100px;
+    width:52px;
+    height:52px;
+    border:none;
+    border-radius:50%;
+    background:var(--gold);
+    color:black;
+    cursor:pointer;
+    font-size:1.2rem;
+    display:none;
+    z-index:998;
+    transition:.3s;
+    box-shadow:var(--shadow);
+}
+
+#topBtn:hover{
+    transform:translateY(-5px);
+}
+
+/* ==========================
+   MOBILE MENU
+==========================*/
+
+@media(max-width:900px){
+
+    .nav-links{
+
+        position:absolute;
+
+        top:85px;
+
+        left:0;
+
+        width:100%;
+
+        background:#111;
+
+        display:flex;
+
+        flex-direction:column;
+
+        text-align:center;
+
+        max-height:0;
+
+        overflow:hidden;
+
+        transition:.4s;
+
+        box-shadow:0 8px 25px rgba(0,0,0,.35);
+
+    }
+
+    .nav-links.active{
+
+        max-height:420px;
+
+        padding:20px 0;
+
+    }
+
+    .nav-links li{
+
+        margin:18px 0;
+
+    }
+
+}
+
+/* ==========================
+   SCROLLBAR
+==========================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--gold);
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:var(--gold-light);
+}
+
+/* ==========================
+   SELECTION
+==========================*/
+
+::selection{
+    background:var(--gold);
+    color:black;
+}
+
+/* ==========================
+   SMALL ANIMATIONS
+==========================*/
+
+.card,
+.gallery-grid img,
+.contact-grid div,
+.btn{
+
+    transition:all .35s ease;
+
+}
+
+/* ==========================
+   LARGE SCREEN
+==========================*/
+
+@media(min-width:1400px){
+
+    .container{
+
+        max-width:1300px;
+
+    }
+
+}
+
+/* ==========================
+   TABLET
+==========================*/
+
+@media(max-width:768px){
+
+    section{
+
+        padding:75px 6%;
+
+    }
+
+    .contact-grid{
+
+        gap:25px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+}
+
+/* ==========================
+   MOBILE
+==========================*/
+
+@media(max-width:600px){
+
+    body{
+
+        font-size:15px;
+
+    }
+
+    .logo h2{
+
+        font-size:1.05rem;
+
+    }
+
+    .logo img{
+
+        width:50px;
+
+        height:50px;
+
+    }
+
+    .section-title{
+
+        font-size:1.8rem;
+
+    }
+
+    .contact-grid div{
+
+        padding:25px;
+
+    }
+
+    .whatsapp{
+
+        width:55px;
+
+        height:55px;
+
+        right:18px;
+
+        bottom:18px;
+
+    }
+
+    #topBtn{
+
+        width:48px;
+
+        height:48px;
+
+        right:18px;
+
+        bottom:85px;
+
+    }
+
+}
+
+/* ==========================
+   EXTRA SMALL DEVICES
+==========================*/
+
+@media(max-width:400px){
+
+    .hero h1{
+
+        font-size:1.7rem;
+
+    }
+
+    .hero p{
+
+        font-size:.95rem;
+
+    }
+
+    .btn{
+
+        padding:14px 20px;
+
+        font-size:.9rem;
+
+    }
+
+    .card{
+
+        padding:22px;
+
+    }
+
+}
+
+/* ==========================================
+   END OF STYLE.CSS
+==========================================*/
