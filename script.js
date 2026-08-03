@@ -206,22 +206,22 @@ const services = [
 {
 category:"Hair",
 name:"Hair Cut (female)",
-price:"150" ,
-offer:100
+price:"200" ,
+offer:150
 },
 
 {
 category:"Hair",
 name:"Hair Wash",
-price:150,
-offer:120
+price:250,
+offer:150
 },
 
 {
 category:"Hair",
 name:"Hair Spa (Classic)",
 price:600,
-offer:499
+offer:500
 },
 
 {
@@ -235,14 +235,14 @@ offer:800
 category:"Hair",
 name:"Hair Smoothening",
 price:"From 3500",
-offer:2999
+offer:3000
 },
 
 {
 category:"Hair",
 name:"Hair Botox",
 price:"From 4500",
-offer:4000
+offer:4200
 },
 
 {
@@ -262,15 +262,15 @@ offer:300
 {
 category:"Skin",
 name:"Natural Fruit Facial",
-price:600,
-offer:500
+price:500,
+offer:400
 },
 
 {
 category:"Skin",
 name:"De-Tan Facial",
-price:800,
-offer:600
+price:600,
+offer:500
 },
 
 {
@@ -304,22 +304,22 @@ offer:1999
 {
 category:"Nails",
 name:"Gel Polish",
-price:600,
-offer:499
+price:800,
+offer:600
 },
 
 {
 category:"Nails",
 name:"Nail Extension",
-price:1499,
-offer:1299
+price:1400,
+offer:1200
 },
 
 {
 category:"Nails",
 name:"French Nail Extension",
-price:2000,
-offer:1600
+price:1600,
+offer:1400
 },
 
 {
