@@ -206,8 +206,8 @@ const services = [
 {
 category:"Hair",
 name:"Hair Cut",
-price:250 ,
-offer:199
+price:"150   (female only) " ,
+offer:100
 },
 
 {
@@ -220,57 +220,78 @@ offer:120
 {
 category:"Hair",
 name:"Hair Spa",
-price:799,
-offer:699
+price:600,
+offer:499
 },
 
 {
 category:"Hair",
 name:"Hair Botox",
-price:3999,
-offer:3499
+price:"4500   onwards",
+offer:4000
 },
 
 {
 category:"Hair",
 name:"Hair Smoothening",
-price:3500,
-offer:3999
+price:"3500   onwards",
+offer:2999
 },
 
 {
 category:"Hair",
 name:"Hair Keratin",
-price:4500,
-offer:4499
+price:"4500   onwards",
+offer:4200
 },
 
 {
 category:"Skin",
 name:"Cleanup",
-price:499,
-offer:450
+price:400,
+offer:300
 },
 
 {
 category:"Skin",
-name:"Facial",
-price:599,
-offer:499
+name:"Facial Detan",
+price:800,
+offer:600
 },
 
 {
 category:"Skin",
-name:"Hydrafacial",
+name:"Facial Anti Wrinkle",
+price:800,
+offer:600
+},
+
+{
+category:"Skin",
+name:"Facial Natural Fruit",
+price:600,
+offer:500
+},
+
+{
+category:"Skin",
+name:"Hydrafacial Normal",
+price:2000,
+offer:1600
+},
+
+{
+category:"Skin",
+name:"Hydrafacial Special",
 price:2499,
 offer:1999
 },
 
 {
 category:"Skin",
-name:"Detan",
-price:700,
-offer:599
+name:"Hydrafacial Korean Glass" , 
+price:2499,
+offer:1999
 },
 
 {
@@ -293,6 +314,14 @@ name:"Volume Eyelash",
 price:1800,
 offer:1599
 },
+
+{
+category:"Eyes",
+name:"Notural Eyelash" ,
+price:1500,
+offer:1299
+},
+
 
 ];
 
