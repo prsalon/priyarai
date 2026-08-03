@@ -205,8 +205,8 @@ const services = [
 
 {
 category:"Hair",
-name:"Hair Cut",
-price:"150   (female only) " ,
+name:"Hair Cut (female)",
+price:"150" ,
 offer:100
 },
 
@@ -219,29 +219,36 @@ offer:120
 
 {
 category:"Hair",
-name:"Hair Spa",
+name:"Hair Spa (Classic)",
 price:600,
 offer:499
 },
 
 {
 category:"Hair",
-name:"Hair Botox",
-price:"4500   onwards",
-offer:4000
+name:"Hair Spa (Premium)",
+price:1000,
+offer:800
 },
 
 {
 category:"Hair",
 name:"Hair Smoothening",
-price:"3500   onwards",
+price:"From 3500",
 offer:2999
 },
 
 {
 category:"Hair",
+name:"Hair Botox",
+price:"From 4500",
+offer:4000
+},
+
+{
+category:"Hair",
 name:"Hair Keratin",
-price:"4500   onwards",
+price:"From 4500",
 offer:4200
 },
 
@@ -254,44 +261,51 @@ offer:300
 
 {
 category:"Skin",
-name:"Facial Detan",
-price:800,
-offer:600
-},
-
-{
-category:"Skin",
-name:"Facial Anti Wrinkle",
-price:800,
-offer:600
-},
-
-{
-category:"Skin",
-name:"Facial Natural Fruit",
+name:"Natural Fruit Facial",
 price:600,
 offer:500
 },
 
 {
 category:"Skin",
-name:"Hydrafacial Normal",
+name:"De-Tan Facial",
+price:800,
+offer:600
+},
+
+{
+category:"Skin",
+name:"Anti Wrinkle Facial",
+price:800,
+offer:600
+},
+
+{
+category:"Skin",
+name:"Hydrafacial Classic",
 price:2000,
 offer:1600
 },
 
 {
 category:"Skin",
-name:"Hydrafacial Special",
+name:"Hydrafacial Premium",
 price:2499,
 offer:1999
 },
 
 {
 category:"Skin",
-name:"Hydrafacial Korean Glass" , 
+name:"Korean Glass Hydrafacial" , 
 price:2499,
 offer:1999
+},
+
+{
+category:"Nails",
+name:"Gel Polish",
+price:600,
+offer:499
 },
 
 {
@@ -303,23 +317,30 @@ offer:1299
 
 {
 category:"Nails",
-name:"Gel Polish",
-price:600,
-offer:499
+name:"French Nail Extension",
+price:2000,
+offer:1600
 },
 
 {
 category:"Eyes",
-name:"Volume Eyelash",
+name:"Natural Eyelash Extension" ,
+price:1500,
+offer:1299
+},
+
+{
+category:"Eyes",
+name:"Hybrid Eyelash Extension",
 price:1800,
 offer:1599
 },
 
 {
 category:"Eyes",
-name:"Notural Eyelash" ,
-price:1500,
-offer:1299
+name:"Volume Eyelash Extension",
+price:2000,
+offer:1599
 },
 
 
@@ -352,7 +373,9 @@ ${service.name}
 
 <td>
 
-₹${service.price}
+${String(service.price).startsWith("From")
+  ? `From ₹${String(service.price).replace("From ", "")}`
+  : `₹${service.price}`}
 
 </td>
 
@@ -360,7 +383,9 @@ ${service.name}
 
 <span class="old-price">
 
-₹${service.price}
+${String(service.price).startsWith("From")
+  ? `From ₹${String(service.price).replace("From ", "")}`
+  : `₹${service.price}`}
 
 </span>
 
